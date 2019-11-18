@@ -86,7 +86,7 @@ if __name__ == '__main__':
 
             if 'me' in recipient:
                 try:
-                    speak('What should I say? ')
+                    speak('What should I write? ')
                     content = myCommand()
 
                     server = smtplib.SMTP('smtp.gmail.com', 587)
@@ -95,7 +95,7 @@ if __name__ == '__main__':
                     server.login("username", 'password')
                     server.sendmail('user email address', "Recipient_Username", content)
                     server.close()
-                    speak('Email sent!')
+                    speak('Email has been sent!')
 
                 except:
                     speak('Sorry Sir I am unable to send your message at this time!')
@@ -110,7 +110,7 @@ if __name__ == '__main__':
             speak('Hello Sir')
 
         elif 'bye' in query:
-            speak('Bye Sir, have a good day.')
+            speak('Goodbye Sir, have a good day.')
             sys.exit()
 
         elif 'play music' in query:
