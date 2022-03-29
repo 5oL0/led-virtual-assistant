@@ -35,7 +35,7 @@ def greetMe():
 
 greetMe()
 
-speak('Hello Sir, I am your digital assistant Solo')
+speak('Hello, I am your digital assistant LED coach')
 speak('How may I assist you?')
 
 
@@ -51,7 +51,7 @@ def myCommand():
         print('User: ' + query + '\n')
 
     except sr.UnknownValueError:
-        speak('Sorry Sir! I didn\'t get that! Try typing the command!')
+        speak('Sorry I didn\'t get that! Try typing the command!')
         query = str(input('Command: '))
 
     return query
@@ -103,14 +103,14 @@ if __name__ == '__main__':
 
         elif 'nothing' in query or 'abort' in query or 'stop' in query:
             speak('okay')
-            speak('Bye Sir, have a good day.')
+            speak('Bye, have a good day.')
             sys.exit()
 
         elif 'hello' in query:
-            speak('Hello Sir')
+            speak('Hello')
 
         elif 'bye' in query:
-            speak('Goodbye Sir, have a good day.')
+            speak('Goodbye, have a good day.')
             sys.exit()
 
         elif 'play music' in query:
@@ -140,4 +140,4 @@ if __name__ == '__main__':
             except:
                 webbrowser.open('www.google.com')
 
-        speak('Next Command! Sir!')
+        speak('Next Command!')
